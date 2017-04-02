@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hackathon_Scheduler::system_cron" title="Cron Management" translate="title" module="Hackathon_Scheduler" sortOrder="55" parent="Magento_Backend::system" resource="Hackathon_Scheduler::cron_management"/>
+        <add id="Hackathon_Scheduler::system_cron_jobs" title="Jobs" translate="title" module="Hackathon_Scheduler" sortOrder="10" parent="Hackathon_Scheduler::system_cron" action="cron_management/jobs" resource="Hackathon_Scheduler::jobs"/>
+        <add id="Hackathon_Scheduler::system_cron_schedules" title="Schedules" translate="title" module="Hackathon_Scheduler" sortOrder="20" parent="Hackathon_Scheduler::system_cron" dependsOnModule="Magento_Cron" action="cron_management/schedules" resource="Hackathon_Scheduler::schedule"/>
+    </menu>
+</config>
